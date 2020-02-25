@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    Boun.App
+  </title>
+  <meta name="description"
+    content="Boğaziçi Üniversitesi öğrencilerinin Yardımcısı. Yemek, Bildirim, Etkinlik,RK ve nicesi...">
+  <meta name="keywords" content="boun,yemek,app,boun.app,bogazici,shuttle,rk,59rk,uygulama,sms,bildirim">
+  <link rel="icon" href="ikon.png">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  <link href="https://fonts.googleapis.com/css?family=Keania+One" rel="stylesheet">
+
+  <!-- ios    -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link href="splashscreens/iphone5_splash.png"
+    media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"
+    rel="apple-touch-startup-image" />
+  <link href="splashscreens/iphone6_splash.png"
+    media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)"
+    rel="apple-touch-startup-image" />
+  <link href="splashscreens/iphoneplus_splash.png"
+    media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)"
+    rel="apple-touch-startup-image" />
+  <link href="splashscreens/iphonex_splash.png"
+    media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)"
+    rel="apple-touch-startup-image" />
+  <link href="splashscreens/iphonexr_splash.png"
+    media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)"
+    rel="apple-touch-startup-image" />
+  <link href="splashscreens/iphonexsmax_splash.png"
+    media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)"
+    rel="apple-touch-startup-image" />
+  <link href="splashscreens/ipad_splash.png"
+    media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)"
+    rel="apple-touch-startup-image" />
+  <link href="splashscreens/ipadpro1_splash.png"
+    media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)"
+    rel="apple-touch-startup-image" />
+  <link href="splashscreens/ipadpro3_splash.png"
+    media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)"
+    rel="apple-touch-startup-image" />
+  <link href="splashscreens/ipadpro2_splash.png"
+    media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)"
+    rel="apple-touch-startup-image" />
+
+
+  <link rel="apple-touch-icon" href="boun-app-icon.png">
+
+  <!--ios  -->
+
+  <link rel="manifest" href="/manifest.json">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131913630-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-131913630-1');
+  </script>
+
+
+  <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+  <script>
+    var OneSignal = window.OneSignal || [];
+    OneSignal.push(function () {
+      OneSignal.init({
+        appId: "16a94c8d-5853-4ef9-b16e-a46f7d509fc2",
+      });
+    });
+  </script>
+
+  <!-- Hotjar Tracking Code for boun.app -->
+  <script>
+    (function (h, o, t, j, a, r) {
+      h.hj = h.hj || function () {
+        (h.hj.q = h.hj.q || []).push(arguments)
+      };
+      h._hjSettings = {
+        hjid: 1230497,
+        hjsv: 6
+      };
+      a = o.getElementsByTagName('head')[0];
+      r = o.createElement('script');
+      r.async = 1;
+      r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+      a.appendChild(r);
+    })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+  </script>
+
+  <!-- fb comments -->
+  <!-- <meta property="fb:app_id" content="{268693200443528}" /> -->
+
+  <!-- bitis fb -->
+</head>
+
+<body style="padding-top: 55px;">
+
+  <div class="container">
+    <!-- <nav class="navbar fixed-top navbar-light justify-content-center bg-light"> -->
+    <nav class="navbar fixed-top navbar-light nav-fill bg-light">
+      <div class="dropdown">
+        <a class="btn btn-outline-primary btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          O
+        </a>
+
+        <div class="dropdown-menu dropdown-menu-left" aria-labelledby="dropdownMenuLink">
+          <a class="dropdown-item" href="http://registration.boun.edu.tr/" target="_blank">Registration </a>
+          <a class="dropdown-item" href="https://www.facebook.com/groups/bogazicibuddy/" target="_blank">Buddy</a>
+          <a class="dropdown-item" href="https://moodle.boun.edu.tr/login/login.php">Moodle</a>
+          <a class="dropdown-item" href="https://akademiktakvim.boun.edu.tr/">Akademik Takvim</a>
+          <!-- <a class="dropdown-item" href="#">Something else here</a> -->
+          <!-- <a class="dropdown-item" href="#">Something else here</a> -->
+          <!-- <a class="dropdown-item" href="#">Something else here</a> -->
+
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="mailto:emin@boun.app">Özellik Talebi</a>
+          <a class="dropdown-item" data-toggle="modal" data-target="#thanks">
+            Teşekkür
+          </a>
+          <a class="dropdown-item"
+            href="http://www.boun.edu.tr/Assets/Documents/Content/Public/kampus_hayati/yemek_listesi.pdf"
+            target="_blank">AylıkYemek.pdf</a>
+          <a class="dropdown-item bg-primary text-warning" href="https://t.me/BounApp"> <b>Telegram Bildirim</b> </a>
+        </div>
+      </div>
+      <!-- <a class=" btn-outline-success nav-link dropdown-toggle " data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">O</a>
+                                    <div class="dropdown-menu">
+                                            
+                                      
+                                    </div> -->
+
+
+      <h6> <a href="#cati"> Çatı </a></h6>
+
+      <h4> <a style="font-family: 'Keania One', cursive;" href="."> Boun.App</a></h4>
+
+
+      <h6> <a href="#sinebutable"> SineBu</a></h6>
+
+
+
+      <div class="dropdown">
+        <a class="btn btn-outline-primary btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          K
+        </a>
+
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+          <a class="dropdown-item" href="https://www.iett.istanbul/tr/main/hatlar/59RK/" target="_blank">59RK</a>
+          <a class="dropdown-item" href="https://www.iett.istanbul/tr/main/hatlar/AVR3A/" target="_blank">AVR3A</a>
+          <a class="dropdown-item" href="https://www.iett.istanbul/tr/main/hatlar/59HS/" target="_blank">59HS</a>
+        </div>
+      </div>
+
+
+      <!-- <a href="https://www.iett.istanbul/tr/main/hatlar/59RK/"> <button class="btn btn-outline-success" type="button" >RK</button></a> -->
+    </nav>
+  </div>
+  <!--  S MODAL-->
+  <!-- Button trigger modal -->
+  <!-- Modal -->
+  <div class="modal fade" id="thanks" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">TEŞEKKÜRLER</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Tüm feedbackleri için <ul>
+            <li>Hüseyin Şengün</li>
+            <li>Furkan Kırsaçlı</li>
+            <li>Gökberk Çalışkan</li>
+            <li>Buğra Elmas</li>
+            <li>ve adını yazmayı unuttuğum dostlarım</li>
+          </ul> 'a teşekkür ederim
+          <br> -Emin Deniz
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="HAKKIMIZDA" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">TEŞEKKÜRLER</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Tüm destekleri için Hüseyin Şengün'e teşekkür ederim
+          <br> -Emin Deniz
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- F MODAL -->
+
+
+
+
+  <!-- style="margin-top:55px"   test emin mart 2019-->
+  <div class="text-center">
+
+
+    <div id="dikkat" style="display: none;" class="alert alert-info alert-dismissible">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      <strong>Dikkat!</strong> Yemek Saati geçti.<a onclick="dikkatyok();yarin();tumu()" class="alert-link">
+        <button type="button" class="btn btn-outline-danger"> Yarını Göster</button></a>
+    </div>
+
+
+    <!-- <a style="color:blue;" onclick="bugun()" id="tarih"></a> -->
+
+
+
+
+
+
+
+
+
+
+
+    <div class="w-100 align-items-center">
+      <button type="button" class="btn btn-secondary" aria-pressed="true" onclick="dun()"> &#60; </button>
+      <button type="button" onclick="bugun()" class="btn btn-outline-primary btn-sm" id="tarih"></button>
+      <button type="button" class="btn btn-secondary" aria-pressed="true" onclick="yarin()">&#62;</button>
+      <a id="listetarihi"></a> <br> <b id="gun"></b>
+    </div>
+
+    <div class="w-100 align-items-center">
+      <!-- <button type="button" class="btn btn-secondary btn-sm" aria-pressed="true" onclick="dun()">  &#60;  </button> -->
+      <button type="button" class="btn btn-sm btn-outline-secondary" aria-pressed="true" onclick="tumu()">TÜM
+        GÜN</button>
+      <button type="button" class="btn btn-sm btn-outline-secondary" aria-pressed="true" onclick="ole()">ÖĞLE</button>
+      <button type="button" class="btn btn-sm btn-outline-secondary" aria-pressed="true" onclick="asam()">AKŞAM</button>
+      <!-- <button type="button" class="btn btn-secondary btn-sm" aria-pressed="true" onclick="yarin()">&#62;</button> -->
+      <!-- <a id="listetarihi"></a> <br> <b id="gun"></b> -->
+    </div>
+  </div>
+
+  <!-- h100 KALDIRABİLİRSİN      yuppi mxauto cozdu margin sorununu  -->
+  <div class="row w-100 p-1 h-100 mx-auto ">
+    <div class="col-sm-6 mt-1 mx-auto text-center " id="card-ogle">
+      <div class="card ">
+
+        <div class="card text-center">
+          <div class="card-header">
+
+            <!-- OYY -->
+            <b> <button type="button" class="btn btn-outline-success btn-sm" aria-pressed="true"
+                id="olumlu">&#8593;</button>
+              <span class="text-success" color="red" id="iyi"></span> &emsp;
+              <b> ÖĞLE </b> &emsp;
+              <span class="text-danger" id="kotu"></span> </b>
+            <button type="button" class="btn btn-outline-danger btn-sm" aria-pressed="true"
+              id="olumsuz">&#8595;</button>
+
+            <!-- OY bitis -->
+
+            <!-- <span  class="text-secondery" id="sayi"></span> -->
+
+
+
+
+          </div>
+          <div class="card-body " style="padding:0;">
+
+            <div id="oglen" style="font-size:3vh">
+
+
+
+              <table style="margin-bottom:0;" class="table  table-hover">
+
+
+                <tbody>
+                  <tr>
+                    <th style="border-top: 0" scope="row"><a style="color:black; " id="oglecorba"></a><br></th>
+
+                  </tr>
+                  <tr>
+                    <th scope="row"> <a style="color:black" id="ogleyemek"></a><br></th>
+
+                  </tr>
+                  <tr>
+                    <th scope="row"><a style="color:black" id="oglealt"></a><br></th>
+
+                  </tr>
+                  <tr>
+                    <th scope="row"><a style="color:black" id="oglepilav"></a><br></th>
+
+                  </tr>
+                  <tr>
+                    <th scope="row"> <a style="color:black" id="oglesalata"></a><br></th>
+
+                  </tr>
+                </tbody>
+              </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              <!-- <a style="color:black" id="oglecorba"></a><br>
+                    <a  style="color:black" id="ogleyemek"></a><br>
+                    <a style="color:black" id="oglealt"></a><br>
+                    <a style="color:black" id="oglepilav"></a><br>
+                    <a style="color:black" id="oglesalata"></a><br> -->
+            </div>
+
+          </div>
+          <div class="card-footer text-muted ozlu" id="ozlu-1">
+            Afiyet Olsun
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <br> <br> <br>
+    <p></p>
+    <div class="col-sm-6 mt-1 mx-auto text-center" id="card-aksam">
+      <div class="card">
+
+        <div class="card text-center">
+          <div class="card-header">
+            <!-- OY -->
+            <b> <button type="button" class="btn btn-outline-success btn-sm" aria-pressed="true"
+                id="aksolumlu">&#8593;</button>
+              <span class="text-success" color="red" id="aksiyi"></span> &emsp;
+              <b> AKŞAM </b> &emsp;
+              <span class="text-danger" id="akskotu"></span> </b>
+            <button type="button" class="btn btn-outline-danger btn-sm" aria-pressed="true"
+              id="aksolumsuz">&#8595;</button>
+            <!-- oy bitis -->
+          </div>
+          <div class="card-body " style="padding:0;">
+
+            <div id="aksam" style="font-size:3vh">
+
+              <table style="margin-bottom:0;" class="table  table-hover">
+
+
+                <tbody>
+                  <tr>
+                    <th style="border-top: 0" scope="row"><a style="color:black; " id="akscorba"></a><br></th>
+
+                  </tr>
+                  <tr>
+                    <th scope="row"> <a style="color:black" id="aksyemek"></a><br></th>
+
+                  </tr>
+                  <tr>
+                    <th scope="row"><a style="color:black" id="aksalt"></a><br></th>
+
+                  </tr>
+                  <tr>
+                    <th scope="row"><a style="color:black" id="akspilav"></a><br></th>
+
+                  </tr>
+                  <tr>
+                    <th scope="row"> <a style="color:black" id="akssalata"></a><br></th>
+
+                  </tr>
+                </tbody>
+              </table>
+
+
+
+
+              <!-- 
+                        <a style="color:black" id="akscorba"></a><br>
+                        <a style="color:black" id="aksyemek"></a><br>
+                        <a style="color:black" id="aksalt"></a><br>
+                        <a style="color:black" id="akspilav"></a><br>
+                        <a style="color:black" id="akssalata"></a><br> -->
+            </div>
+
+          </div>
+          <div class="card-footer text-muted ozlu" id="ozlu-2">
+            Afiyet Olsun
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Button trigger modal -->
+
+  <div class="text-center">
+
+    Yemekleri google'da kolayca aramak için üstüne basabilirsiniz <br>
+    <h4>Hata ve öneriler için iletişime geçebilirsiniz, teşekkürler</h4>
+
+    <div id="pwainfo"> <b> Tüm Mobil Cihazlarınızda ANA SAYFAYA EKLE diyerek uygulama olarak kullanabilirsiniz. <a
+          href="gif/ios.gif">iPhone-iOS</a> <a href="gif/and.gif">Android</a> </b><br>
+
+      <button type="button" class="btn btn-primary" onclick="gosterX('gizlenecek'),document.getElementById('gosterbutton').style.display='none';
+  
+  " id="gosterbutton"> Göster </button>
+      <div id="gizlenecek" style="display: none">
+
+        Android ve Windows Cihazlarda Bildirimleri açabilir, iOS cihazlarda ise <a
+          href="https://t.me/BounApp">Telegram</a> aracılığıyla faydalanabilirsiniz. <br>
+
+        Sitemizi sevdiyseniz lütfen arkadaşlarınıza öneriniz, ziyaretiniz için teşekkürler <br>
+
+        <div>
+          <a href="gif/ios.gif"> <img id="pwaios" style="max-width: 49%; position: relative;" src="gif/ios-mini.gif"
+              alt="APP olarak Ana Ekrana Ekle"> </a>
+          <a href="gif/and.gif"> <img id="pwaand" style="max-width: 49%; position: relative;" src="gif/and-mini.gif"
+              alt="APP olarak Ana Ekrana Ekle"> </a> <br>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- scriptler for gif PWA -->
+    <script>
+      if (window.navigator.standalone === true) {
+        document.getElementById("pwainfo").style.display = "none";
+        document.getElementById("pwaios").style.display = "none";
+        document.getElementById("pwaand").style.display = "none";
+      }
+
+      if (window.matchMedia('(display-mode: standalone)').matches) {
+        document.getElementById("pwainfo").style.display = "none";
+        document.getElementById("pwaios").style.display = "none";
+        document.getElementById("pwaand").style.display = "none";
+      }
+    </script>
+
+
+
+
+    <br>
+
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+      YEMEK SAATLERİ
+    </button>
+  </div>
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Yemek Saatleri</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="panel panel-info">
+            <div class="panel-heading table-responsive"><strong>HAFTAİÇİ YEMEK SAATLERİ</strong></div>
+            <table style="max-width: 100%;" class="table mx-auto table-sm table-responsive">
+              <tbody>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td>SABAH KAHVALTISI</td>
+                  <td>ÖĞLE YEMEĞİ</td>
+                  <td>AKŞAM YEMEĞİ</td>
+                </tr>
+                <tr>
+                  <td>
+                    <p>KUZEY KAMPÜS</p>
+                  </td>
+                  <td>07:30 – 09:30</td>
+                  <td>11:30 – 14:30</td>
+                  <td>17:00 – 19:00</td>
+                </tr>
+                <tr>
+                  <td>GÜNEY KAMPÜS</td>
+                  <td>07:30 – 09:30</td>
+                  <td>12:15&nbsp;– 14:30</td>
+                  <td>17:00 – 19:00</td>
+                </tr>
+                <tr>
+                  <td>KİLYOS KAMPÜS</td>
+                  <td>07:30 – 10:00</td>
+                  <td>12:00 – 15:00</td>
+                  <td>17:00 – 19:00</td>
+                </tr>
+                <tr>
+                  <td>KANDİLLİ KAMPÜS</td>
+                  <td>07:30-09:30&nbsp;</td>
+                  <td>11:30 – 14:30</td>
+                  <td>17:00 - 19:00</td>
+                </tr>
+                <tr>
+                  <td>HİSAR KAMPÜS</td>
+                  <td>07:30 - 09:30</td>
+                  <td>11:30 -14:30</td>
+                  <td>VERİLMEMEKTEDİR</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="panel panel-info">
+            <div class="panel-heading table-responsive"><strong>HAFTASONU YEMEK SAATLERİ</strong></div>
+            <table style="max-width: 100%;" class="table mx-auto table-sm table-responsive">
+              <tbody>
+                <tr>
+                  <td>&nbsp;</td>
+                  <td>SABAH KAHVALTISI</td>
+                  <td>ÖĞLE YEMEĞİ</td>
+                  <td>AKŞAM YEMEĞİ</td>
+                </tr>
+                <tr>
+                  <td>KUZEY KAMPÜS</td>
+                  <td>08:30 – 10:00</td>
+                  <td>12:00 – 13:45</td>
+                  <td>17:30&nbsp;– 19:30</td>
+                </tr>
+                <tr>
+                  <td>GÜNEY KAMPÜS</td>
+                  <td>08:30 – 10:00</td>
+                  <td>12:00 - 13:45</td>
+                  <td>17:30&nbsp;– 19:30</td>
+                </tr>
+                <tr>
+                  <td>KİLYOS KAMPÜS</td>
+                  <td>08:30 – 10:00</td>
+                  <td>12:00 – 13:45</td>
+                  <td>17:30&nbsp;– 19:30</td>
+                </tr>
+                <tr>
+                  <td>KANDİLLİ KAMPÜS</td>
+                  <td>08:30 –&nbsp;10:00</td>
+                  <td>12:00 –&nbsp;13:45</td>
+                  <td>17:30&nbsp;–&nbsp;19:30</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <h3>Güncelleme Tarihi: 29.09.2019 13:56</h3>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">KAPAT</button>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- anket -->
+  <!-- <div class="text-center">
+        <h3>Yemekler sizce nasıl?</h3>
+          <button type="button" class="btn btn-success" aria-pressed="true"  id="olumlu">İYİ</button>
+          <button type="button" class="btn btn-danger" aria-pressed="true" id="olumsuz">KÖTÜ</button><br>
+          <div class="mx-auto">
+          <h3>
+            <span class="text-success" color="red" id="iyi"></span> &emsp;
+          <span  class="text-secondery" id="sayi"></span>&emsp;
+          <span  class="text-danger" id="kotu"></span> </h3>
+          </div>
+          </div> -->
+  <!-- anket -->
+
+
+  <!-- MİNİ SÜRÜM KAPATILDI
+  <div class="text-center">
+  <a href="sadeceyemekhane.html"><button type="button" class="btn btn-secondary btn-sm" >
+        Mini Sürüm
+        </button></a>
+       Sadece Yemekhaneyi basitçe görmek için( Boun.App özelliklerini barındırmaz.)
+      </div> -->
+
+
+
+  <!-- <div  class="text-center"> 
+      <h5>(β) Çatı Yemek Tweetleri <br> Lütfen Tweet tarihine dikkat ediniz</h5>
+      <a  class="twitter-timeline" data-height="40" data-lang="tr" data-dnt="true"  data-chrome="nofooter transparent noheader noborders"   data-tweet-limit="2" data-theme="light" href="https://twitter.com/HallCati?ref_src=twsrc%5Etfw">Tweets by HallCati</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div> -->
+
+  <div id="cati"></div>
+
+  <style>
+    #cati {
+      margin-top: -70px;
+      padding-top: 70px;
+    }
+
+    #sinebutable {
+      margin-top: -70px;
+      padding-top: 70px;
+    }
+  </style>
+
+  <div class="card-body text-center">
+    <h5> New Hall Çatı Günlük Liste (β) 12:00-20:00 </h5>
+    <b>
+      <h5>Yemekler - Resimler</h5>
+    </b>
+
+    <!-- <ul style="width: 49%; float: left; margin-right: 2%; font-size: auto;" class="list-group" id="catiyemek"> -->
+
+        <ul style="font-size: auto;" class="list-group  text-center" id="catiyemek">
+
+      <!-- <li class="list-group-item">Cras justo odio</li> -->
+
+    </ul>
+
+    <!-- <ul style="width: 49%; float: right; font-size: auto; " class=" list-group" id="catizeytin"> -->
+    <ul style="font-size: auto; " class=" text-center  list-group" id="catizeytin">
+
+
+    </ul>
+
+    <p style="clear: both;"> </p>
+    <a>Çatı Yemek Listesi, Twitter'dan alınmaktadır.</a> <a href="https://twitter.com/hallcati">Twitter</a>
+
+  </div>
+
+
+  <br>
+
+  <div id="sinebutable" class="card-body text-center">
+    <h5 style="color:blue;"> <a href="https://sinebu.boun.edu.tr/program">SİNEBU</a> </h5>
+    <ul style="font-size: auto; " class=" list-group" id="sinebu">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Saat</th>
+            <th scope="col">Film</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th id="sinesaatbir" scope="row">Loading</th>
+            <td id="sinebir">Loading</td>
+          </tr>
+          <tr>
+            <th id="sinesaatiki" scope="row">Yükleniyor</th>
+            <td id="sineiki">Yükleniyor</td>
+          </tr>
+          <tr>
+            <th id="sinesaatuc" scope="row">chargement</th>
+            <td id="sineuc">chargement</td>
+          </tr>
+          <tr>
+            <th id="sinesaatdort" scope="row">Yüklenmediyse bugün film yoktur.</th>
+            <td id="sinedort">Yüklenmediyse bugün film yoktur.</td>
+          </tr>
+        </tbody>
+      </table>
+    </ul>
+  </div>
+
+
+
+
+
+  <!-- Firebase App is always required and must be first -->
+  <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-firestore.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      // apiKey: "AIzaSyCLmk7O0kmts_nQknXxXRF0f4FGW6pT230",
+      // authDomain: "suqrapp.firebaseapp.com",
+      // databaseURL: "https://suqrapp.firebaseio.com",
+      // projectId: "suqrapp",
+      // storageBucket: "suqrapp.appspot.com",
+      // messagingSenderId: "428915698007"
+      apiKey: "AIzaSyBUfDVWkM9U2RJfvbPlnygx_E2s35BSJZw",
+      authDomain: "bounapp-9d455.firebaseapp.com",
+      databaseURL: "https://bounapp-9d455.firebaseio.com",
+      projectId: "bounapp-9d455",
+      storageBucket: "bounapp-9d455.appspot.com",
+      messagingSenderId: "939487732404"
+
+
+
+    };
+    firebase.initializeApp(config);
+
+    var db = firebase.firestore();
+
+    var meal_today;
+
+    var d = new Date();
+    document.getElementById("tarih").innerHTML = "Bugün: " + d.toLocaleString();
+    var dd = d.getDate();
+    var mm = d.getMonth() + 1;
+    var yyyy = d.getFullYear();
+    var smm, sdd;
+    if (dd < 10) {
+      sdd = "0" + dd;
+    } else {
+      sdd = dd;
+    }
+    if (mm < 10) {
+      smm = "0" + mm;
+    } else {
+      smm = mm;
+    }
+
+    var date = yyyy + "-" + smm + "-" + sdd;
+    var originaldate = yyyy + "-" + smm + "-" + sdd;
+    var originaldd = dd;
+
+    console.log(date);
+
+    function isle(date) {
+      db.collection("YemekOcak").doc(date)
+        .get().then(function (doc) {
+          for (i in doc.data()) {
+            // if(i=="akssalata" || i=="oglesalata"){
+            document.getElementById(i).innerHTML = "";
+
+            if(i=="ozlu-1"||i=="ozlu-2"){
+                document.getElementById(i).innerHTML = doc.data()[i];
+
+
+              }
+              else{
+
+
+            (doc.data()[i].split(",")).map((item) => {
+
+              
+                console.log(item);
+                var node = document.createElement("a");
+                node.setAttribute("href", "https://www.google.com/search?q=" + item);
+                var metin = document.createTextNode(item + " ");
+                node.style.color = "black";
+                node.style.padding = "1vw"
+                node.appendChild(metin);
+
+
+                document.getElementById(i).appendChild(node);
+            
+
+
+              
+            })
+          }
+            // }
+            // else{
+            // document.getElementById(i).innerHTML =(doc.data()[i]);
+            // document.getElementById(i).href = "https://www.google.com/search?q="+doc.data()[i];
+            // }
+
+          }
+
+          // ozlu
+          // if(doc.data()["ozlu-1"]=="1"){document.getElementById("ozlu-1").style.display="none";
+          // document.getElementById("ozlu-2").style.display="none";}
+          // ozlu
+
+        });
+    }
+    isle(date);
+
+    function ole() {
+      document.getElementById("card-aksam").style.display = "none";
+      document.getElementById("card-ogle").style.display = "block";
+    }
+
+    function asam() {
+      document.getElementById("card-aksam").style.display = "block";
+      document.getElementById("card-ogle").style.display = "none";
+    }
+
+    function tumu() {
+      document.getElementById("card-aksam").style.display = "block";
+      document.getElementById("card-ogle").style.display = "block";
+    }
+    var hour = d.getHours();
+    if (hour >= 15) {
+      asam();
+    }
+    if (hour >= 20) {
+      tumu();
+      document.getElementById("dikkat").style.display = "block";
+    }
+
+    function dikkatyok() {
+      document.getElementById("dikkat").style.display = "none";
+    }
+
+    function bugun() {
+      isle(originaldate);
+      dd = originaldd;
+      date = originaldate;
+      document.getElementById("listetarihi").innerHTML = "<br>Menü Tarihi: " + date;
+      tumu();
+      oygoster();
+    }
+
+    function yarin() {
+
+
+
+      if (dd > 33) {
+
+      } else {
+
+        dd++;
+        if (dd < 10) {
+          sdd = "0" + dd;
+        } else {
+          sdd = dd;
+        }
+        if (mm < 10) {
+          smm = "0" + mm;
+        } else {
+          smm = mm;
+        }
+
+
+        var date = yyyy + "-" + smm + "-" + sdd;
+        console.log(date);
+        isle(date);
+        tumu();
+        document.getElementById("listetarihi").innerHTML = "<br>Menü Tarihi: " + date;
+
+        oygizle();
+      }
+
+    }
+
+    function dun() {
+
+
+
+      if (dd < 0) {
+
+      } else {
+
+
+        dd--;
+        if (dd < 10) {
+          sdd = "0" + dd;
+        } else {
+          sdd = dd;
+        }
+        if (mm < 10) {
+          smm = "0" + mm;
+        } else {
+          smm = mm;
+        }
+
+
+        var date = yyyy + "-" + smm + "-" + sdd;
+        console.log(date);
+        isle(date);
+        tumu();
+        document.getElementById("listetarihi").innerHTML = "<br>Menü Tarihi: " + date;
+
+        oygizle();
+
+      }
+    }
+
+    function oygizle() {
+      document.getElementById("olumlu").style.visibility = "hidden";
+      document.getElementById("olumsuz").style.visibility = "hidden";
+      document.getElementById("aksolumlu").style.visibility = "hidden";
+      document.getElementById("aksolumsuz").style.visibility = "hidden";
+      document.getElementById("iyi").style.visibility = "hidden";
+      document.getElementById("kotu").style.visibility = "hidden";
+      document.getElementById("aksiyi").style.visibility = "hidden";
+      document.getElementById("akskotu").style.visibility = "hidden";
+    }
+
+    function oygoster() {
+      document.getElementById("olumlu").style.visibility = "visible";
+      document.getElementById("olumsuz").style.visibility = "visible";
+      document.getElementById("aksolumlu").style.visibility = "visible";
+      document.getElementById("aksolumsuz").style.visibility = "visible";
+      document.getElementById("iyi").style.visibility = "visible";
+      document.getElementById("kotu").style.visibility = "visible";
+      document.getElementById("aksiyi").style.visibility = "visible";
+      document.getElementById("akskotu").style.visibility = "visible";
+    }
+
+
+
+    // 
+    // 
+    // 
+    // 
+  </script>
+
+  <!-- <script src="tweetjs.js"></script> -->
+  <script>
+    async function postData(url = '', data = {}) {
+      // Default options are marked with *
+      const response = await fetch(url, {
+        method: 'POST', // *GET, POST, PUT, DELETE, etc.
+        headers: {
+          //       'Content-Type': 'application/json'
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        //     redirect: 'follow', // manual, *follow, error
+        //     referrer: 'no-referrer', // no-referrer, *client
+        body: JSON.stringify(data) // body data type must match "Content-Type" header
+      });
+      return await response.json(); // parses JSON response into native JavaScript objects
+    }
+
+
+
+
+    try {
+      postData('https://www.tweetjs.com/API.aspx', {
+        Action: "ListTweetsOnUserTimeline",
+        ScreenName: "hallcati"
+      }).then((data) => {
+
+
+        const ts = data;
+        var texts = []
+        var images = []
+        var a = new Date()
+
+        var gun = a.getDate();
+        for (i = 0; i < ts.length; i++) {
+          if (ts[i].created_at.split(" ")[2] == gun) {
+            if (ts[i].extended_entities) {
+              ts[i].extended_entities.media.forEach(element => {
+                images.push(element.media_url_https)
+              });
+            }
+            texts.push(ts[i].text)
+          }
+          // else{
+          //     break;
+          // }
+        }
+        console.log(data, texts, images);
+        texts.reverse();
+        for (i in texts)
+          for (j in texts[i].split("\n")) {
+            console.log(i)
+
+            var node = document.createElement("LI");
+            node.className = "list-group-item";
+            var textnode = document.createTextNode(texts[i].split("\n")[j]);
+            node.appendChild(textnode);
+            document.getElementById("catiyemek").appendChild(node);
+          }
+
+        for (i in images) {
+          var anode = document.createElement("a");
+          var node = document.createElement("img");
+          node.className = "list-group-item ";
+          // var textnode = document.createTextNode();
+          node.src = images[i];
+          anode.href = images[i];
+          // node.style.width="auto";
+          node.style.maxWidth = "100%";
+          node.style.maxHeight = "100%";
+
+          anode.appendChild(node);
+          document.getElementById("catizeytin").appendChild(anode);
+        }
+
+
+
+
+        console.log(JSON.stringify(data));
+      })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      // JSON-string from `response.json()` call
+    } catch (error) {
+      console.error(error);
+    }
+
+
+
+
+    // TweetJs.ListTweetsOnUserTimeline("hallcati",
+    // function (data) {
+
+
+    // });
+
+
+
+
+    // fetch('https://favqs.com/api/qotd')
+    //   .then((res) => {
+    //     return res.json();
+    //   })
+    //   .then((data) => {
+    //     console.log(data.quote)
+    //     document.getElementById("ozlu-1").innerHTML = data.quote.body + "\n " + data.quote.author + " \n" +
+    //       "favqs.com";
+    //     document.getElementById("ozlu-2").innerHTML = data.quote.body + "\n " + data.quote.author + " \n" +
+    //       "favqs.com";
+
+    //     // return data;
+
+    //   })
+
+    // 
+    // 
+    // 
+    // 
+
+
+
+    // db.collection("cati").doc("liste").collection(date).doc("yemek")
+    //     .get().then(function(doc) {
+
+
+    //         for ( i in doc.data()){
+    //           if(doc.data()[i].trim()!=""){
+    //           var node = document.createElement("LI");
+    //           node.className = "list-group-item";
+    //     var textnode = document.createTextNode(doc.data()[i]);
+    //     node.appendChild(textnode);
+    //     document.getElementById("catiyemek").appendChild(node);
+    //         }}
+
+
+    //     });
+
+    //     db.collection("cati").doc("liste").collection(date).doc("tatli")
+    //     .get().then(function(doc) {
+
+
+    //         for ( i in doc.data()){
+    //           if(doc.data()[i].trim()!=""){
+    //           var node = document.createElement("LI");
+    //           node.className = "list-group-item";
+    //     var textnode = document.createTextNode(doc.data()[i]);
+    //     node.appendChild(textnode);
+    //     document.getElementById("catitatli").appendChild(node);
+    //           }
+    //         }
+
+
+    //     });   
+
+
+    //     db.collection("cati").doc("liste").collection(date).doc("zeytin")
+    //     .get().then(function(doc) {
+
+
+    //     //     for ( i in doc.data()){
+    //     //       if(doc.data()[i].trim()!=""){
+    //     //       var node = document.createElement("LI");
+    //     //       node.className = "list-group-item";
+    //     // var textnode = document.createTextNode(doc.data()[i]);
+    //     // node.appendChild(textnode);
+    //     // document.getElementById("catizeytin").appendChild(node);
+    //     //       }
+    //     //     }
+
+    //         for ( i in doc.data()){
+    //           if(doc.data()[i].trim()!=""){
+
+    // var anode=document.createElement("a");
+    //           var node = document.createElement("img");
+    //           node.className = "list-group-item ";
+    //     // var textnode = document.createTextNode();
+    //     node.src=doc.data()[i];
+    //     anode.href=doc.data()[i];
+    //     // node.style.width="auto";
+    //     node.style.maxWidth="200px";
+    //     node.style.maxHeight="100px";
+
+    //             anode.appendChild(node);
+    //     document.getElementById("catizeytin").appendChild(anode);
+    //           }
+    //         }
+
+
+    //     });   
+
+
+    db.collection("cati").doc("liste").collection(date).doc("sinebu")
+      .get().then(function (doc) {
+
+
+        //     for ( i in doc.data()){
+        //       if(doc.data()[i].trim()!=""){
+        //       var node = document.createElement("LI");
+        //       node.className = "list-group-item";
+        // var textnode = document.createTextNode(doc.data()[i]);
+        // node.appendChild(textnode);
+        // document.getElementById("sinebu").appendChild(node);
+        //       }
+        //     }
+
+        if (doc.exists) {
+          // document.getElementById("sinebir").innerHTML=doc.data()["bir"];
+
+          // document.getElementById("sineiki").innerHTML=doc.data()["bir"];
+
+          // document.getElementById("sineuc").innerHTML=doc.data()["uc"];
+
+          // document.getElementById("sine").innerHTML=doc.data()["bir"];
+          sineset(doc, "bir");
+          sineset(doc, "iki");
+          sineset(doc, "uc");
+          sineset(doc, "dort");
+
+        } else {
+
+          document.getElementById("sinebu").innerHTML = "Yok";
+
+        }
+
+
+
+      });
+
+
+
+    function sineset(doc, x) {
+      document.getElementById("sinesaat" + x).innerHTML = Object.keys(doc.data()["" + x])[0];
+      document.getElementById("sine" + x).innerHTML = (doc.data()[""+x])[Object.keys(doc.data()["" + x])[0]];
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // mart 2019
+
+    function gizleX(x) {
+      document.getElementById(x).style.display = "none";
+
+    }
+
+    function gosterX(x) {
+      document.getElementById(x).style.display = "block";
+
+    }
+  </script>
+
+  <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+  </script>
+  <!-- <script src="ozlu.js"></script> -->
+
+
+  <!-- <p class="text-center"> <b>Comments</b> </p>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/tr_TR/sdk.js#xfbml=1&autoLogAppEvents=1&version=v3.2&appId=268693200443528';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div class="fb-comments align-items-center mx-auto" data-width="100%" data-href="https://boun.app/" data-numposts="6"></div> -->
+
+
+  <h5 class="card-body text-center"> DISQUS </h5>
+
+  <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://boun-app.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+  <!-- 
+<div id="commento"></div>
+<script src="https://cdn.commento.io/js/commento.js"></script> -->
+
+  <div class="text-center">
+    <!-- Share Button -->
+    <a href="https://api.whatsapp.com/send?text=https://boun.app/ 
+Sitesinden Yemeklere Sinemaya ve Kısayollara ulaşabilirsin, Bildirim de alabilirsin."> Whatsapp'te Paylaş </a><br>
+    <a href="https://api.whatsapp.com/send?text=https://boun.app/ 
+Sitesinden Yemeklere Sinemaya ve Kısayollara ulaşabilirsin, Bildirim de alabilirsin.">
+      <img class="img-responsive img-rounded" style="max-height: 5vh; max-width: 60%;" src="WhatsApp_Logo_5.png"
+        alt="Whatsapp'te Paylaş"> </a>
+    <!-- END Share Button -->
+  </div>
+
+</body>
+<footer class="page-footer font-small blue">
+  <script src="vote.js"></script>
+  <div class='onesignal-customlink-container text-center'></div>
+  <!-- Copyright -->
+
+  <div class="text-center">
+
+
+    <a href="Boun.App.apk">(Beta) Boun.App.apk for Android</a>
+    <br>
+    <a href="https://play.google.com/store/apps/details?id=com.boun.app">GOOGLE PLAY STORE</a>
+    'dan Beta halini test edebilirsiniz. Chrome'un son sürümünü kullanmanız gerekmektedir. Şu anlık çok iyi
+    çalışmamaktadır. Geliştirmeler devam edecektir. Teşekkürler
+
+  </div>
+
+  <div class="footer-copyright text-center ">
+    <!-- Yemekleri kolayca google'da aramak için üstüne basabilirsiniz --> <br> Öneri ve Olası İşbirlikleri için İletişim:
+    <!-- <a href="mailto:emin@boun.app"> Emin Deniz emin&lt;at&gt;boun.app</a> -->
+    <a href="mailto:emin@boun.app"> Emin Deniz emin@boun.app</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+
+</html>

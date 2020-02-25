@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        MNC
+    </title>
+    <meta name="description"
+        content="Multiple Number to one Contact to add multiple number to whatsapp group">
+    <meta name="keywords" content="whatsapp,multiple,number,contact,group,add, member, WhatsApp group,once,how
+    ">
+    <!-- <link rel="icon" href="icon.png"> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+   
+
+</head>
+
+
+
+
+<h1>M N C</h1>
+<h3>Dosya İsmi</h3>
+<input id="fileName" type="text">
+<br>
+<h3>kişiler</h3>
+<textarea id="list" placeholder="Buraya sheet'den numaraları alt alta kopyalayabilirsiniz" rows="10" cols="50"></textarea> 
+
+
+<br>
+<button id="create">Create file</button> 
+<a download="info.txt" id="downloadlink" style="display: none">Download</a>
+
+
+
+
+
+
+
+
+<script>
+// document.getElementById("button").addEventListener("click", function(){
+ 
+//    var numbers= document.getElementById("list").value.split('\n');
+ 
+//     numbers.forEach(element => {
+
+
+//         alert(element);
+
+
+
+//     }); 
+  
+
+
+
+// });
+
+
+(function () {
+var textFile = null,
+  makeTextFile = function (text) {
+    var data = new Blob([text], {type: 'text/plain'});
+
+    // If we are replacing a previously generated file we need to
+    // manually revoke the object URL to avoid memory leaks.
+    if (textFile !== null) {
+      window.URL.revokeObjectURL(textFile);
+    }
+
+    textFile = window.URL.createObjectURL(data);
+
+    return textFile;
+  };
+
+
+  var create = document.getElementById('create'),
+    textbox = document.getElementById('list');
+
+  create.addEventListener('click', function () {
+    var link = document.getElementById('downloadlink');
+
+
+    fn=document.getElementById("fileName").value;
+    link.download=""+fn+".csv";
+
+
+// metin="BEGIN:VCARD\nVERSION:3.0\nFN:"+fn+"\n";
+var metin="";
+    textbox.value.split("\n").forEach(element => {
+
+
+temp=element.trim().replace(/\s/g,"").replace("+90","").trim();
+       
+  number=temp.replace(" ","");
+  number=number.replace(" ","");
+  number=number.replace(" ","");
+  number=number.replace(" ","");
+  number=number.replace(" ","");
+  number=number.replace(" ","");
+  number=number.replace("+90","");
+  number=number.replace(")","");
+  number=number.replace("(","");
+  number=number.trim();
+if(number[0]=="0"){
+    number=number.substring(1);
+}
+
+        metin+=","+number +"";
+
+    });
+
+
+metin+="";
+
+if(fn!="" &&textbox.value!=""){
+
+    link.href = makeTextFile(metin);
+    link.style.display = 'block';}
+  }, false);
+})();
+
+
+
+</script>
+
+</head>
+
+
+<footer>
+
+
+</footer>
+
+</html>

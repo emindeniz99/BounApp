@@ -1,0 +1,10 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.boun.app",
+      "sha256_cert_fingerprints": ["F8:60:8E:B2:D5:15:31:87:34:3D:19:D2:D1:BD:27:05:D7:7A:AD:37:BD:CD:B9:A6:25:A9:29:A3:36:8E:FC:3B", "B4:F1:AC:A7:28:23:3A:1D:3D:4F:5A:42:1B:5F:57:53:B5:26:1D:DA:3E:84:CC:B8:79:53:DD:4A:50:47:96:6B","BD:C3:3B:B9:95:5B:04:84:23:8C:FE:38:8A:0D:29:99:C8:CA:BB:87:8D:CD:DC:5C:B4:48:BF:C7:8C:25:A0:15", "E4:30:E0:C5:20:1D:83:05:C4:67:63:08:EF:0B:95:77:57:8D:FD:49:CA:98:6A:AE:45:CC:55:93:6B:FE:24:B8"]
+    }
+  }
+]

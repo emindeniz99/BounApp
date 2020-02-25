@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta name="robots" content="noindex,nofollow" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131913630-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131913630-1');
+</script>
+</head>
+<body style="font-size:4vh">
+    yemekler
+<!-- <div >
+  <li> <input class="yemek" type="text">
+</li>
+<li> <input class="yemek" type="text">
+</li>
+<li> <input class="yemek" type="text">
+</li>
+<li> <input class="yemek" type="text">
+</li>
+<li> <input class="yemek" type="text">
+</li>
+<li> <input class="yemek" type="text">
+</li>
+<li> <input class="yemek" type="text">
+</li>
+<li> <input class="yemek" type="text">
+</li>
+<li> <input class="yemek" type="text">
+</li>
+<li> <input class="yemek" type="text">
+</li>
+<li> <input class="yemek" type="text">
+</li>
+  
+</div> -->
+<textarea id="yemekbox" placeholder="Buraya alt alta yemekleri kopyala yapıştır yapabilirsiniz" rows="10" cols="50"></textarea>
+
+
+
+<br>
+
+    tatlılar
+
+    
+    <!-- <li> <input type="text" class="tatli"> </li>
+    <li> <input type="text" class="tatli"> </li>
+    <li> <input type="text" class="tatli"> </li>
+    <li> <input type="text" class="tatli"> </li>
+
+    <li> <input type="text" class="tatli"> </li>
+    <li> <input type="text" class="tatli"> </li>
+    <li> <input type="text" class="tatli"> </li>
+
+    <li> <input type="text" class="tatli"> </li>
+    <li> <input type="text" class="tatli"> </li>
+    <li> <input type="text" class="tatli"> </li>
+    <li> <input type="text" class="tatli"> </li> -->
+    <textarea id="tatlibox" placeholder="Buraya alt alta yemekleri kopyala yapıştır yapabilirsiniz" rows="10" cols="50"></textarea>
+
+
+<br>
+    zeytinyağlılar
+
+    
+    <!-- <li> <input type="text" class="zeytin"> </li>
+    <li> <input type="text" class="zeytin"> </li>
+    <li> <input type="text" class="zeytin"> </li>
+    <li> <input type="text" class="zeytin"> </li>
+    <li> <input type="text" class="zeytin"> </li>
+    <li> <input type="text" class="zeytin"> </li>
+
+    <li> <input type="text" class="zeytin"> </li>
+    <li> <input type="text" class="zeytin"> </li>
+    <li> <input type="text" class="zeytin"> </li>
+    <li> <input type="text" class="zeytin"> </li>
+    <li> <input type="text" class="zeytin"> </li>
+    <li> <input type="text" class="zeytin"> </li> -->
+
+    <textarea id="zeytinbox" placeholder="Buraya alt alta yemekleri kopyala yapıştır yapabilirsiniz" rows="10" cols="50"></textarea>
+
+<br><br>
+<button onclick="submit()"> GÖNDER</button>
+
+<br>
+ <br>
+Her Satıra sadece tek bir yemeği giriniz <br>
+ <br>
+Teşekkürler <br>
+Gönder tuşuna bastıktan sonra hemen sayfadan ayrılmayın, işlemin gerçekleşmesini 10-15 saniye alabilmektedir. <br>
+<br>
+
+
+
+
+<br><br>
+
+
+
+Lütfen gerekmedikçe bu butona basmayınız. Menüyü temizler
+<button onclick="sil()">Tüm menüyü sil, sıfırla</button>
+
+
+
+
+
+
+<!-- 
+<textarea id="sinebox" placeholder="Buraya alt alta filmleri kopyala yapıştır yapabilirsiniz" rows="10" cols="50"></textarea> -->
+
+
+  
+  <a href="https://boun.app"><p>Boun.App</p></a>
+<!-- Firebase App is always required and must be first -->
+<script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-firestore.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        // apiKey: "AIzaSyCLmk7O0kmts_nQknXxXRF0f4FGW6pT230",
+        // authDomain: "suqrapp.firebaseapp.com",
+        // databaseURL: "https://suqrapp.firebaseio.com",
+        // projectId: "suqrapp",
+        // storageBucket: "suqrapp.appspot.com",
+        // messagingSenderId: "428915698007"
+
+        apiKey: "AIzaSyBUfDVWkM9U2RJfvbPlnygx_E2s35BSJZw",
+    authDomain: "bounapp-9d455.firebaseapp.com",
+    databaseURL: "https://bounapp-9d455.firebaseio.com",
+    projectId: "bounapp-9d455",
+    storageBucket: "bounapp-9d455.appspot.com",
+    messagingSenderId: "939487732404"
+    };
+    firebase.initializeApp(config);
+
+    var db = firebase.firestore();
+
+    // var meal_today;
+
+    var d = new Date();
+    // document.getElementById("tarih").innerHTML = "Bugün: "+d.toLocaleString();
+    var dd=d.getDate();
+    var mm=d.getMonth()+1;
+    var yyyy=d.getFullYear();
+    var smm,sdd;
+    if(dd<10){
+        sdd="0"+dd;
+    } else{sdd=dd;}
+    if(mm<10){
+        smm="0"+mm;
+    } else{smm=mm;}
+    
+    var date=yyyy+"-"+smm+"-"+sdd;
+    var originaldate=yyyy+"-"+smm+"-"+sdd;
+    var originaldd=dd;
+
+    console.log(date);
+    function isle(date){
+    db.collection("YemekOcak").doc(date)
+    .get().then(function(doc) {
+        for ( i in doc.data()){
+        
+            document.getElementById(i).innerHTML =(doc.data()[i]);
+            document.getElementById(i).href = "https://www.google.com/search?q="+doc.data()[i];
+        }
+        
+    
+
+    });
+    }
+// isle(date);
+    
+
+function getir(cins,kutusu){
+
+    db.collection("cati").doc("liste").collection(date).doc(cins)
+    .get().then(function(doc) {
+
+      
+        for ( i in doc.data()){
+          if(doc.data()[i].trim()!=""){
+          
+    
+    document.getElementById(kutusu).innerHTML+=doc.data()[i]+"\n";
+        }
+       
+
+    }});
+
+
+}
+
+getir("yemek","yemekbox");
+getir("tatli","tatlibox");
+getir("zeytin","zeytinbox");
+
+// getir("sinebu","sinebox");
+
+// db.collection("cati").doc("liste").collection(date).doc("yemek")
+//     .get().then(function(doc) {
+
+      
+//         for ( i in doc.data()){
+//           if(doc.data()[i].trim()!=""){
+          
+    
+//     document.getElementById("yemekbox").innerHTML+=doc.data()[i]+"\n";
+//         }
+       
+
+//     }});
+
+
+
+
+
+
+// CATI İSİ
+
+
+function submit(){
+// var yemeklist=document.getElementsByClassName("yemek");
+// var tatlilist=document.getElementsByClassName("tatli");
+// var zeytinlist=document.getElementsByClassName("zeytin");
+
+
+
+
+
+ yemeklist= document.getElementById("yemekbox").value.split('\n');
+ zeytinlist= document.getElementById("zeytinbox").value.split('\n');
+ tatlilist= document.getElementById("tatlibox").value.split('\n');
+
+sil();
+
+for(i=0;i<yemeklist.length;i++){
+    temp=i;
+    // if (yemeklist[i].value.trim()!=""){
+
+
+        db.collection("cati").doc("liste").collection(date).doc("yemek").set({
+            [temp]:yemeklist[i].trim()},{merge:true}
+        );
+
+    // }
+    
+
+
+
+}
+
+for(i=0;i<tatlilist.length;i++){
+    temp=i;
+    // if (tatlilist[i].value.trim()!=""){
+
+
+        db.collection("cati").doc("liste").collection(date).doc("tatli").set({
+            [temp]:tatlilist[i].trim()},{merge:true}
+        );
+
+    // }
+    
+
+
+
+}
+for(i=0;i<zeytinlist.length;i++){
+    temp=i;
+    // if (tatlilist[i].value.trim()!=""){
+
+
+        db.collection("cati").doc("liste").collection(date).doc("zeytin").set({
+            [temp]:zeytinlist[i]},{merge:true}
+        );
+
+    // }
+    
+
+
+
+}
+
+
+
+
+
+// sinelist= document.getElementById("sinebox").value.split('\n');
+
+
+
+
+
+// for(i=0;i<sinelist.length;i++){
+//     temp=i;
+//     // if (tatlilist[i].value.trim()!=""){
+
+
+//         db.collection("cati").doc("liste").collection(date).doc("sinebu").set({
+//             [temp]:sinelist[i].trim()},{merge:true}
+//         );
+
+//     // }
+    
+
+
+
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+function sil(){
+    db.collection("cati").doc("liste").collection(date).doc("zeytin").set({1:""}
+        
+        );
+        db.collection("cati").doc("liste").collection(date).doc("yemek").set({1:""}
+        
+        );
+        db.collection("cati").doc("liste").collection(date).doc("tatli").set({1:""}
+        
+        );
+        // db.collection("cati").doc("liste").collection(date).doc("sinebu").set({1:""}
+        
+        // );
+
+}
+</script>
+</body>
+</html>
+
+
+
+
+
