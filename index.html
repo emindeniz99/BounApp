@@ -90,6 +90,18 @@
 
 		<link rel="manifest" href="/manifest.json" />
 
+		<script
+			src="https://browser.sentry-cdn.com/5.14.1/bundle.min.js"
+			integrity="sha384-uNLty2kYRXkczv6MLytto1fP/VzNBKjYpUNIpNa3yvW0CYZrzJE4TyvUBDHtbMmq"
+			crossorigin="anonymous"
+		></script>
+		<script>
+			Sentry.init({
+				dsn:
+					"https://d532276965f449f3aa7d1f84fd1ded9e@sentry.io/5002022"
+			})
+		</script>
+
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script
 			async
@@ -966,7 +978,6 @@
 				id="sinebucontent"
 				style="font-size: auto; "
 				class=" list-group"
-				id="sinebu"
 			>
 				<table class="table table-striped">
 					<thead>
@@ -1421,7 +1432,8 @@
 						sineset(doc, "uc")
 						sineset(doc, "dort")
 					} else {
-						document.getElementById("sinebu").innerHTML = "Yok"
+						document.getElementById("sinebucontent").innerHTML =
+							"Yok"
 					}
 				})
 
@@ -1442,10 +1454,9 @@
 
 			function gosterX(x) {
 				document.getElementById(x).style.display = "block"
-      }
-      
+			}
 
-      db.collection("duyurular")
+			db.collection("duyurular")
 				.doc("genel")
 				.collection(date)
 				.doc("sinebu")
@@ -1462,12 +1473,13 @@
 					//     }
 
 					if (doc.exists) {
-            if(doc.data()["hide"]){
-              gizleX("sinebucontent")
-            }
-            gosterX("sinebuduyuru")
-            document.getElementById("sinebuduyuru").innerText=doc.data()["metin"]
-            
+						if (doc.data()["hide"]) {
+							gizleX("sinebucontent")
+						}
+						gosterX("sinebuduyuru")
+						document.getElementById(
+							"sinebuduyuru"
+						).innerText = doc.data()["metin"]
 					}
 				})
 		</script>
@@ -1541,19 +1553,20 @@ this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your pag
 				href="https://api.whatsapp.com/send?text=https://boun.app/ 
 Sitesinden Yemeklere Sinemaya ve Kısayollara ulaşabilirsin, Bildirim de alabilirsin."
 			>
-				Whatsapp'te Paylaş </a
-			><br />
-			<a
+				Whatsapp'te arkadaşlarınla paylaş 
+				<!-- </a> -->
+			<br />
+			<!-- <a
 				href="https://api.whatsapp.com/send?text=https://boun.app/ 
 Sitesinden Yemeklere Sinemaya ve Kısayollara ulaşabilirsin, Bildirim de alabilirsin."
-			>
+			> -->
 				<img
 					class="img-responsive img-rounded"
 					style="max-height: 5vh; max-width: 60%;"
 					src="WhatsApp_Logo_5.png"
 					alt="Whatsapp'te Paylaş"
 				/>
-			</a>
+			</!-->
 			<!-- END Share Button -->
 		</div>
 	</body>
@@ -1563,22 +1576,30 @@ Sitesinden Yemeklere Sinemaya ve Kısayollara ulaşabilirsin, Bildirim de alabil
 		<!-- Copyright -->
 
 		<div class="text-center">
-			<a href="Boun.App.apk">(Beta) Boun.App.apk for Android</a>
+			<a
+				href="https://play.google.com/store/apps/details?id=com.boun.app&utm_source=boun.app&utm_campaign=bottomtext&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
+				><img
+					alt="Google Play'den alın"
+					class="img-responsive"
+					style="max-height: 9vh; max-width: 75%; margin-top: 1vw;"
+					src="https://play.google.com/intl/en_us/badges/static/images/badges/tr_badge_web_generic.png"
+			/></a>
 			<br />
 			<a href="https://play.google.com/store/apps/details?id=com.boun.app"
-				>GOOGLE PLAY STORE</a
+				>Google Play Store</a
 			>
-			'dan Beta halini test edebilirsiniz. Chrome'un son sürümünü
-			kullanmanız gerekmektedir. Şu anlık çok iyi çalışmamaktadır.
-			Geliştirmeler devam edecektir. Teşekkürler
+			'dan indirebilirsiniz. Chrome 72+ kullanmanız gerekmektedir. Şu anda online olarak çalışmaktadır. Geliştirmeler devam edecektir. Teşekkürler
 		</div>
 
-		<div class="footer-copyright text-center ">
+		<div class="footer-copyright text-center " style="margin-bottom:2vw ;">
 			<!-- Yemekleri kolayca google'da aramak için üstüne basabilirsiniz -->
 			<br />
 			Öneri ve Olası İşbirlikleri için İletişim:
-			<!-- <a href="mailto:emin@boun.app"> Emin Deniz emin&lt;at&gt;boun.app</a> -->
-			<a href="mailto:emin@boun.app"> Emin Deniz emin@boun.app</a>
+			<a href="mailto:emin@boun.app"> Emin Deniz emin@boun.app</a> 
+			<a style="margin: 1vw; " href="https://www.linkedin.com/in/emindeniz99/">
+				<img class="img-responsive"
+				style="max-height: 4vh; max-width: 75%;" src="https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg" alt="">
+			</a>
 		</div>
 		<!-- Copyright -->
 	</footer>
