@@ -10,12 +10,6 @@
 // var db = firebase.firestore();
 
 var config = {
-    // apiKey: "AIzaSyCLmk7O0kmts_nQknXxXRF0f4FGW6pT230",
-    // authDomain: "suqrapp.firebaseapp.com",
-    // databaseURL: "https://suqrapp.firebaseio.com",
-    // projectId: "suqrapp",
-    // storageBucket: "suqrapp.appspot.com",
-    // messagingSenderId: "428915698007"
     apiKey: "AIzaSyBUfDVWkM9U2RJfvbPlnygx_E2s35BSJZw",
     authDomain: "bounapp-9d455.firebaseapp.com",
     databaseURL: "https://bounapp-9d455.firebaseio.com",
