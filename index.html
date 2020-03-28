@@ -891,7 +891,7 @@
 
 		<style>
 			#cati {
-				margin-top: -70px;
+				margin-top: -50px;
 				padding-top: 70px;
 			}
 
@@ -903,24 +903,28 @@
 
 		<section id="cati" class="card-body text-center">
 			<h5>New Hall Çatı Günlük Liste (β) 12:00-20:00</h5>
-			<b>
-				<h5>Yemekler - Resimler</h5>
-			</b>
-			<ul
-				style="font-size: auto;"
-				class="list-group  text-center"
-				id="catiyemek"
-			></ul>
+			<div id="newhallcaticontent">
+				<b>
+					<h5>Yemekler - Resimler</h5>
+				</b>
+				<ul
+					style="font-size: auto;"
+					class="list-group  text-center"
+					id="catiyemek"
+				></ul>
 
-			<ul
-				style="font-size: auto; "
-				class=" text-center  list-group"
-				id="catizeytin"
-			></ul>
+				<ul
+					style="font-size: auto; "
+					class=" text-center  list-group"
+					id="catizeytin"
+				></ul>
 
-			<p style="clear: both;"></p>
-			<a>Çatı Yemek Listesi, Twitter'dan alınmaktadır.</a>
-			<a href="https://twitter.com/hallcati">Twitter</a>
+				<p style="clear: both;"></p>
+				<a>Çatı Yemek Listesi, Twitter'dan alınmaktadır.</a>
+				<a href="https://twitter.com/hallcati">Twitter</a>
+			</div>
+
+			<div id="newhallcatiduyuru" style="display:none"></div>
 		</section>
 
 		<br />
@@ -1328,8 +1332,23 @@
 							).innerText = doc.data()["metin"]
 						}
 					})
+				db.collection("duyurular")
+					.doc("genel")
+					.collection(date)
+					.doc("newhallcati")
+					.get()
+					.then(function(doc) {
+						if (doc.exists) {
+							if (doc.data()["hide"]) {
+								gizleX("newhallcaticontent")
+							}
+							gosterX("newhallcatiduyuru")
+							document.getElementById(
+								"newhallcatiduyuru"
+							).innerText = doc.data()["metin"]
+						}
+					})
 			</script>
-
 
 			<script
 				src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -1707,7 +1726,6 @@ Sitesinden Yemeklere Sinemaya ve Kısayollara ulaşabilirsin, Bildirim de alabil
 		</div>
 
 		<div class="footer-copyright text-center " style="margin-bottom:2vw ;">
-			<!-- Yemekleri kolayca google'da aramak için üstüne basabilirsiniz -->
 			<br />
 			Öneri ve Olası İşbirlikleri için İletişim:
 			<a href="mailto:emin@boun.app"> Emin Deniz emin@boun.app</a>
